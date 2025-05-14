@@ -1,6 +1,6 @@
 from flask import Flask
 from database import db
-from reserva_route import routes
+from controller.reserva_route import routes
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///reservas.db'
