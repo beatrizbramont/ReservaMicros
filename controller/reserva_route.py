@@ -10,6 +10,10 @@ def validar_turma(turma_id):
     r = requests.get(f"http://localhost:8001/turma/{turma_id}")
     return r.status_code == 200
 
+@routes.route('/')
+def index():
+    return 'API de Reserva de Salas funcionando! Adicione "/reservas" para visualizar'
+
 @routes.route("/reservas", methods=["POST"])
 def criar_reserva():
     dados = request.json
