@@ -7,8 +7,8 @@ routes = Blueprint("routes", __name__)
 
 
 def validar_turma(turma_id):
-    resp = requests.get(f"http://localhost:8001/turma/{turma_id}")
-    return resp.status_code == 200
+    r = requests.get(f"http://localhost:8001/turma/{turma_id}")
+    return r.status_code == 200
 
 @routes.route("/reservas", methods=["POST"])
 def criar_reserva():
