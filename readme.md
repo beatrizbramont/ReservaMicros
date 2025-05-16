@@ -128,6 +128,6 @@ reserva-de-salas-flask/
 
 ## 🧑‍💻 Autores
 
-Beatriz Bramont 
-Isadora Silva
-Giovanna Petrilli
+- Beatriz Bramont 
+- Isadora Silva
+- Giovanna Petrilli
