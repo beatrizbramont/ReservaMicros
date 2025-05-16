@@ -4,23 +4,22 @@ Este repositório contém a **API de Reserva de Salas**, desenvolvida com **Flas
 
 ## 🧩 Arquitetura
 
-A API de Reserva de Salas é um **microsserviço** que faz parte de um sistema maior de [School System](https://github.com/caio-ireno/School-System-Api)
+A API de Reserva de Salas é um **microsserviço** que faz parte de um sistema maior de [School System](https://github.com/beatrizbramont/ProjetoAPI.git)
 , sendo responsável exclusivamente pelo gerenciamento das reservas de salas por turma.
 
 ⚠️ **Esta API depende de outra API de Gerenciamento Escolar (School System)**, que deve estar em execução e exposta localmente. A comunicação entre os serviços ocorre via **requisições HTTP REST**, para validar:
 
-- Se a **Turma** existe (`GET /turmas/<id>`)
-- (Opcional) Se o **Aluno** existe (`GET /alunos/<id>`) – pode ser desativado se não usado.
+- Se a **Turma** existe (`GET /turma/<id>`)
 
 ---
 
 ## 🚀 Tecnologias Utilizadas
 
-- Python 3.x
-- Flask
-- SQLAlchemy
-- SQLite (como banco de dados local)
-- Requests (para consumo da API externa)
+- Python 3.x;
+- Flask;
+- SQLAlchemy;
+- SQLite (como banco de dados local);
+- Requests (para consumo da API externa).
 
 ---
 
@@ -29,8 +28,8 @@ A API de Reserva de Salas é um **microsserviço** que faz parte de um sistema m
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/reserva-salas.git
-cd reserva-salas
+git clone https://github.com/beatrizbramont/ReservaMicros.git
+cd ReservaMicros
 ```
 
 ### 2. Crie um ambiente virtual (opcional, mas recomendado)
@@ -54,7 +53,7 @@ python app.py
 ```
 
 A aplicação estará disponível em:
-📍 `http://localhost:5001`
+📍 `http://127.0.0.1:5000`
 
 📝 **Observação:** O banco de dados é criado automaticamente na primeira execução.
 
@@ -87,36 +86,48 @@ A aplicação estará disponível em:
 Certifique-se de que a **API de Gerenciamento Escolar** esteja rodando em:
 
 ```
-http://localhost:5000
+http://127.0.0.1:8001
 ```
 
-E que os endpoints de `GET /turmas/<id>` (e opcionalmente `GET /alunos/<id>`) estejam funcionando corretamente para que a validação seja feita com sucesso.
+E que o endpoint de `GET /turma/<id>` corretamente para que a validação seja feita com sucesso.
 
 ---
 
 ## 📦 Estrutura do Projeto
 
 ```
-reserva-salas/
+reserva-de-salas-flask/
 │
-├── app.py
-├── reserva_model.py
-├── database.py
-├── routes.py
-├── requirements.txt
+├── controller/
+│   └── reserva_route.py      
+│
+├── instance/
+│   └── reservas.db           
+│
+├── models/
+│   └── reserva_model.py      
+│
+├── app.py                    
+├── config.py                 
+├── database.py               
+├── Dockerfile                
+├── requirements.txt          
 └── README.md
+
 ```
 
 ---
 
 ## 🛠️ Futuras Melhorias
 
-- Validação de conflito de horário na sala
-- Integração via fila (RabbitMQ) com outros microsserviços
-- Autenticação de usuários
+- Validação de conflito de horário na sala;
+- Integração via fila (RabbitMQ) com outros microsserviços;
+- Autenticação de usuários.
 
 ---
 
-## 🧑‍💻 Autor
+## 🧑‍💻 Autores
 
-Caio Ireno – Projeto educativo de arquitetura com Flask e microsserviços.
+Beatriz Bramont 
+Isadora Silva
+Giovanna Petrilli
