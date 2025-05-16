@@ -64,8 +64,7 @@ A aplicação estará disponível em:
 - `GET /reservas` – Lista todas as reservas
 - `POST /reservas` – Cria uma nova reserva
 - `GET /reservas/<id>` – Detalha uma reserva
-- `PUT /reservas/<id>` – Atualiza uma reserva
-- `DELETE /reservas/<id>` – Remove uma reserva
+
 
 ### Exemplo de corpo JSON para criação:
 
@@ -122,7 +121,9 @@ reserva-de-salas-flask/
 
 - Validação de conflito de horário na sala;
 - Integração via fila (RabbitMQ) com outros microsserviços;
-- Autenticação de usuários.
+- Autenticação de usuários;
+- Inserção das rotas PUT e DELETE (`PUT /reservas/<id>` – Atualiza uma reserva
+                                   `DELETE /reservas/<id>` – Remove uma reserva).
 
 ---
 
